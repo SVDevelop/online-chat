@@ -63,6 +63,15 @@
             .form_btn {
                 padding: 2px 5px;
             }
+            .emoji-panel {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+            }
+            .emoji-panel__item {
+                cursor: pointer;
+            }
         </style>
 	</head>
 	<body>
@@ -85,6 +94,13 @@
                     <form action="#" class="form">
                         <input type="text" class="form__input">
                         <button class="form_btn">send</button>
+                        <ul class="emoji-panel">
+                            <li class="emoji-panel__item"><span>&#x270C;</span></li>
+                            <li class="emoji-panel__item"><span>&#x261D;</span></li>
+                            <li class="emoji-panel__item"><span>&#x270B;</span></li>
+                            <li class="emoji-panel__item"><span>&#x1F44D;</span></li>
+                            <li class="emoji-panel__item"><span>&#x1F44E;</span></li>
+                        </ul>
                     </form>
                 </div>
             </div>
