@@ -3,21 +3,11 @@ import Chat from './Chat'
 const socket = io();
 const chat = new Chat()
 
-let speed = 1;
-let current_position = 0;
-let alt = 1;
-let position_1 = 0;
-let position_2 = -1;
-
 function scrolling(){
     let chat = document.querySelector('.chat__body')
 
     chat.scrollTop = chat.scrollHeight
 }
-
-// function start_scroll(){
-// timeout_id = setInterval("scrolling()", 10);
-// }
 
 document.body.append(chat.view)
 
