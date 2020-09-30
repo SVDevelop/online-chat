@@ -8,7 +8,13 @@ io.on("connection", (socket) => {
 	socket.context = {
 		name: `User${++idCounter}`
 	}
-
+// Сообщение приветствия
+	io.emit('message', {
+		user: "root",
+		date: Date.now(),
+		content: `Пользователь ${socket.context.name} присоеденился к чату` ,
+	})
+//
 	socket.on("message", content => {
 		io.emit('message', {
 			user: socket.context.name,
