@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat online</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .main {
+                width: 100%;
+                height: 100vh;
+            }
+            .container {
+                margin: 0 auto;
+                max-width: 90%;
+                padding: 10px 15px;
+                height: 100%;
+                border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .chat__body {
+                flex-grow: 1;
+                overflow: auto;
+            }
+            .message {
+                padding: 5px;
+                display: flex;
+                width: 100%;
+                border: 1px solid grey;
+                border-radius: 5px;
+            }
+            .message__info {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+            .message__info:before {
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 100%;
+                right: -10px;
+                background: #000;
+                border: 1px solid;
+                opacity: .7;
+                border-radius: 15px;
+            }
+            .message__content {
+                padding-left: 20px;
+            }
+            .form {
+                width: 100%;
+            }
+            .form__input {
+                width: calc(100% - 85px);
+            }
+            .form_btn {
+                padding: 2px 5px;
+            }
+        </style>
+	</head>
+	<body>
+        <!-- <div class="main">
+            <div class="container">
+                <div class="chat__header">
+                    <h2 class="chat__title">chat</h2>
+                </div>
+                <div class="chat__body">
+                    <div class="message">
+                        <div class="message__info">
+                            <span class="message__user">%NAME%</span>
+                            <span class="message__date">%DATE%</span>
+                        </div>
+                        <p class="message__content">%MESSAGE%</p>
+                    </div>
+
+                </div>
+                <div class="chat__footer">
+                    <form action="#" class="form">
+                        <input type="text" class="form__input">
+                        <button class="form_btn">send</button>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+		<script src="dist/chat.js"></script>
+	</body>
+</html>
