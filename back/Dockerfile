@@ -15,7 +15,7 @@ RUN npm ci --only=production
 # копируем исходный код
 COPY . .
 
-EXPOSE 3000
+EXPOSE 80
 # "serve": "NODE_ENV=development && nodemon server.js"
 # CMD [ "node", "server.js" ]
 CMD [ "npm", "run", "production" ]
